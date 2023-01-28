@@ -3,6 +3,7 @@
 *.d.ts
 node_modules
 chaves.txt
+.vscode
 # CDK asset staging directory
 .cdk.staging
 cdk.out
