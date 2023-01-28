@@ -3,7 +3,7 @@ import "source-map-support/register";
 import * as cdk from "aws-cdk-lib";
 import { ProductsAppStack } from "../lib/productsApp-stack";
 import { ECommerceApiStack } from "../lib/ecommerceAPI-stack";
-import { credentials } from "../credentials";
+import { credentials } from "../config/credentials";
 
 const app = new cdk.App();
 
