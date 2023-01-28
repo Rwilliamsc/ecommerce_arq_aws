@@ -2,6 +2,7 @@ node_modules
 *.ts
 !*.d.ts
 credentials.ts
+config/*.ts 
 
 # CDK asset staging directory
 .cdk.staging
