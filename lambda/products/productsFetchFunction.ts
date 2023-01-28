@@ -4,7 +4,7 @@ import {
   Context,
 } from "aws-lambda";
 
-export async function hendler(
+export async function handler(
   event: APIGatewayProxyEvent,
   context: Context
 ): Promise<APIGatewayProxyResult> {
