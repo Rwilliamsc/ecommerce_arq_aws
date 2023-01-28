@@ -7,6 +7,8 @@ Now this is a blank project for CDK development with TypeScript.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
+`cdk bootstrap` this command only needs to be executed once, per account and per region
+
 ## Useful commands
 
 - `npm run build` compile typescript to js

@@ -4,6 +4,8 @@
 node_modules
 chaves.txt
 .vscode
+.env
+
 # CDK asset staging directory
 .cdk.staging
 cdk.out
