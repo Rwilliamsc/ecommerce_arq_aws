@@ -3,12 +3,13 @@ import "source-map-support/register";
 import * as cdk from "aws-cdk-lib";
 import { ProductsAppStack } from "../lib/productsApp-stack";
 import { ECommerceApiStack } from "../lib/ecommerceAPI-stack";
+import { credentials } from "../credentials";
 
 const app = new cdk.App();
 
 const env: cdk.Environment = {
-  account: process.env.ACCOUNT,
-  region: process.env.REGION,
+  account: credentials.account,
+  region: credentials.region,
 };
 
 const tags = {
