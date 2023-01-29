@@ -7,6 +7,7 @@ import { Construct } from "constructs";
 // Create a new cdk.StackProps extension interface to send the lambda function that will be integrated
 interface ECommerceApiStackProps extends cdk.StackProps {
   productsFetchHandler: lambdaNodeJS.NodejsFunction;
+  productsAdminHandler: lambdaNodeJS.NodejsFunction;
 }
 
 export class ECommerceApiStack extends cdk.Stack {
@@ -39,9 +40,26 @@ export class ECommerceApiStack extends cdk.Stack {
     const productsFetchIntegration = new apigateway.LambdaIntegration(
       props.productsFetchHandler
     );
+    const productsAdminIntegration = new apigateway.LambdaIntegration(
+      props.productsAdminHandler
+    );
 
-    // create a new resource in the apigateway "/products"
+    // create resources in the apigateway
+    // "GET:/products"
     const productsResource = api.root.addResource("products");
     productsResource.addMethod("GET", productsFetchIntegration);
+
+    // "GET:/products/{id}"
+    const productsIdResource = productsResource.addResource("{id}");
+    productsIdResource.addMethod("GET", productsFetchIntegration);
+
+    // "POST:/products"
+    productsResource.addMethod("POST", productsAdminIntegration);
+
+    // "PUT:/products/{id}"
+    productsIdResource.addMethod("PUT", productsAdminIntegration);
+
+    // "DELETE:/products/{id}"
+    productsIdResource.addMethod("DELETE", productsAdminIntegration);
   }
 }
