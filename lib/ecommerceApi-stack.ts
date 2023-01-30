@@ -37,12 +37,8 @@ export class ECommerceApiStack extends cdk.Stack {
       },
     });
 
-    const productsFetchIntegration = new apigateway.LambdaIntegration(
-      props.productsFetchHandler
-    );
-    const productsAdminIntegration = new apigateway.LambdaIntegration(
-      props.productsAdminHandler
-    );
+    const productsFetchIntegration = new apigateway.LambdaIntegration(props.productsFetchHandler);
+    const productsAdminIntegration = new apigateway.LambdaIntegration(props.productsAdminHandler);
 
     // create resources in the apigateway
     // "GET:/products"

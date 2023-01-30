@@ -19,14 +19,10 @@ const tags = {
   type: "study",
 };
 
-const productsAppLayersStack = new ProductsAppLayersStack(
-  app,
-  "ProductsAppLayers",
-  {
-    tags: tags,
-    env: env,
-  }
-);
+const productsAppLayersStack = new ProductsAppLayersStack(app, "ProductsAppLayers", {
+  tags: tags,
+  env: env,
+});
 
 const productsAppStack = new ProductsAppStack(app, "ProductsApp", {
   tags: tags,
