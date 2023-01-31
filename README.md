@@ -7,7 +7,16 @@ Now this is a blank project for CDK development with TypeScript.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
-`cdk bootstrap` this command only needs to be executed once, per account and per region
+Export your credentials before creating the CDK environment
+
+- export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+- export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+- export AWS_DEFAULT_REGION=us-west-2
+
+creating the CDK environment.
+This command below only needs to be executed once, per account and per region.
+
+`cdk bootstrap`
 
 ## Useful commands
 
