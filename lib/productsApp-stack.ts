@@ -44,6 +44,7 @@ export class ProductsAppStack extends cdk.Stack {
       },
       layers: [productsLayers],
       tracing: lambda.Tracing.ACTIVE,
+      insightsVersion: lambda.LambdaInsightsVersion.VERSION_1_0_143_0,
     });
     // add read permission on table products to productsFetchHandler function
     this.productsDdb.grantReadData(this.productsFetchHandler);
@@ -63,6 +64,7 @@ export class ProductsAppStack extends cdk.Stack {
       },
       layers: [productsLayers],
       tracing: lambda.Tracing.ACTIVE,
+      insightsVersion: lambda.LambdaInsightsVersion.VERSION_1_0_143_0,
     });
     // add read permission on table products to productsFetchHandler function
     this.productsDdb.grantWriteData(this.productsAdminHandler);
