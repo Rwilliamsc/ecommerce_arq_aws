@@ -1,7 +1,6 @@
 import * as cdk from "aws-cdk-lib";
 import { Construct } from "constructs";
 import * as dynamodb from "aws-cdk-lib/aws-dynamodb";
-import { SortKeyStep } from "aws-cdk-lib/aws-appsync";
 
 export class EventsDdbStack extends cdk.Stack {
   readonly table: dynamodb.Table;
