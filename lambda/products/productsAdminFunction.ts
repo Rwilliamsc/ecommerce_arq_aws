@@ -105,7 +105,9 @@ function sendproductEvent(product: Product, eventType: ProductEventType, email: 
     .invoke({
       FunctionName: productsEventsFunctioName,
       Payload: JSON.stringify(event),
-      InvocationType: "RequestResponse",
+      //InvocationType: "RequestResponse",
+      // to be async
+      InvocationType: "event",
     })
     .promise();
 }
